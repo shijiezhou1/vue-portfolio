@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["about"],{f820:function(t,s,a){"use strict";a.r(s);var e=function(){var t=this,s=t.$createElement,a=t._self._c||s;return a("div",{staticClass:"about"},[a("h1",[t._v("This is an about page")]),a("div",[a("b-button",{attrs:{disabled:"",variant:"success"}},[t._v("Disabled")]),a("b-button",{attrs:{variant:"success"}},[t._v("Not Disabled")])],1)])},n=[],i=a("2877"),u={},o=Object(i["a"])(u,e,n,!1,null,null,null);o.options.__file="About.vue";s["default"]=o.exports}}]);
-//# sourceMappingURL=about.6689d1da.js.map
