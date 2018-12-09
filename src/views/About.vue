@@ -1,9 +1,33 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <div>
-      <b-button disabled variant="success">Disabled</b-button>
-      <b-button variant="success">Not Disabled</b-button>
+    <div class="container">
+      <div class="row about_cardStyle">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </div>
   </div>
 </template>
+
+<script>
+// @ is an alias to /src
+import Card from "@/components/Card.vue";
+
+export default {
+  components: {
+    Card
+  }
+};
+</script>
+
+<style scoped>
+.about_cardStyle{
+  border: 1px solid black;
+  margin: 0px auto;
+  padding: 10px;
+}
+</style>

@@ -95,6 +95,23 @@ module.exports = {
 
 ```
 npm i bootstrap-vue
+# With Yarn:
+yarn add bootstrap-vue
 ```
 
+### Add to src/main.js
 
+```
+import Vue from 'vue'
+import BootstrapVue from 'bootstrap-vue'
+
+Vue.use(BootstrapVue);
+
+```
+
+```
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+```
+
+### 

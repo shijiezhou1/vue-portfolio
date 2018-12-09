@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "node ./node_modules/vue-gh-pages/index.js -p"
   },
   "dependencies": {
     "vue": "^2.5.17",
@@ -20,6 +21,7 @@
     "bootstrap-vue": "^2.0.0-rc.11",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
+    "vue-gh-pages": "^1.19.0",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
@@ -45,5 +47,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "homepage": "https://github.com/shijiezhou1/vue-portfolio"
 }
