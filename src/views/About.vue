@@ -1,33 +1,36 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-    <div class="container">
-      <div class="row about_cardStyle">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </div>
+  <div class="About">
+    <div class="logo-wrap">
+      <a href="https://www.shijiezhou.com"><img alt="SZ logo" class="szlogo" src="../assets/logo j.gif"></a>
     </div>
+    
+    <section id="footer">
+      <div class="container">
+        <div class="">
+          <p>
+            Copyright ©
+            <a href="https://www.shijiezhou.com">Shijie Zhou</a>
+          </p>
+        </div>
+        <!-- // .desktop-3 -->
+        <div class="clear"></div>
+      </div>
+      <!-- // .container -->
+    </section>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import Card from "@/components/Card.vue";
-
-export default {
-  components: {
-    Card
-  }
-};
 </script>
 
 <style scoped>
-.about_cardStyle{
-  border: 1px solid black;
-  margin: 0px auto;
-  padding: 10px;
+.szlogo {
+  width: 100px;
+  height: 95px;
+  border: 10px solid coral;
+}
+
+.szlogo:hover{
+    -webkit-filter: invert(60%) !important;
 }
 </style>

@@ -1,3 +1,6 @@
+<img width="120" src="https://vuejs.org/images/logo.png" alt="Vue LOGO"/>
+
+
 # vue-live
 
 ## Project setup
@@ -90,6 +93,8 @@ module.exports = {
     }
 };
 ```
+
+<img width="120" src="https://bootstrap-vue.js.org/_nuxt/img/icon.f0a8c9e.png" alt="Vue bootstrap LOGO"/>
 
 # Style 
 
