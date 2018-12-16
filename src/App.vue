@@ -5,7 +5,6 @@
       <router-link class="App_title" to="/">Home</router-link> |
       <router-link class="App_title" to="/project">Project</router-link>
     </div>
-
     <router-view/>
   </div>
 </template>

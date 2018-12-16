@@ -1,5 +1,5 @@
 <template>
-  <div class="About">
+  <div class="about">
     <div class="logo-wrap">
       <a href="https://www.shijiezhou.com"><img alt="SZ logo" class="szlogo" src="../assets/logo j.gif"></a>
     </div>
@@ -21,9 +21,13 @@
 </template>
 
 <script>
+
 </script>
 
 <style scoped>
+.about{
+  height: 800px;
+}
 .szlogo {
   width: 100px;
   height: 95px;

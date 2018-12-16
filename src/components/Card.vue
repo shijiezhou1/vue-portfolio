@@ -5,7 +5,7 @@
         img-alt="Image"
         img-top
         tag="article"
-        style="max-width: 16rem;"
+        style="max-width: 21rem;"
         class="m-2"
       >
         <p

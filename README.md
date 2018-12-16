@@ -94,6 +94,15 @@ module.exports = {
 };
 ```
 
+### MongoDB 
+
+```
+npm install mongodb
+
+var mongo = require('mongodb');
+
+```
+
 <img width="120" src="https://bootstrap-vue.js.org/_nuxt/img/icon.f0a8c9e.png" alt="Vue bootstrap LOGO"/>
 
 # Style 
