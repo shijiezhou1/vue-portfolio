@@ -1,5 +1,6 @@
 <img width="120" src="https://vuejs.org/images/logo.png" alt="Vue LOGO"/>
 
+![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
 
 # vue-live
 
@@ -94,7 +95,9 @@ module.exports = {
 };
 ```
 
-### MongoDB 
+<img width="120" src="https://img.icons8.com/color/1600/mongodb.png" alt="Vue mongodb LOGO"/>
+
+### MongoDB Setup
 
 ```
 npm install mongodb
@@ -128,4 +131,3 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 ```
 
-### 

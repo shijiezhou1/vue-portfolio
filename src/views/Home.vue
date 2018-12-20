@@ -1,12 +1,20 @@
 <template>
   <div class="home">
-    <h1>It is a home page</h1>
+    <div>
+      <b-badge variant="primary">var</b-badge>
+      <b-badge variant="secondary">SHIJIE</b-badge>
+      <b-badge variant="success"> = </b-badge>
+      <b-badge variant="danger">new</b-badge>
+      <b-badge variant="warning">Zhou</b-badge>
+      <b-badge variant="info">()</b-badge>
+    </div>
+   
     <!-- Content here -->
     <div>
-      <b-button href="#">click to show json</b-button>
+      <!-- <b-button class="" href="#">click to show json</b-button> -->
     </div>
     <div class="showjson">{{ json }}</div>
-    <!-- <div class="homepage-video-layer">
+    <div class="homepage-video-layer">
       <video
         id="featuredMovie"
         preload="auto"
@@ -44,7 +52,7 @@
           >
         </b-col>
       </b-row>
-    </b-container> -->
+    </b-container>
   </div>
 </template>
 
@@ -56,46 +64,70 @@ export default {
   data() {
     return {
       showInfo: true,
-      json: null
+      json: null,
+      firstAPI: "https://jsonplaceholder.typicode.com/comments",
+      secondAPI: "https://raw.githubusercontent.com/typicode/jsonplaceholder/master/data.json"
     };
   },
   name: "home",
   components: {
     // HelloWorld
   },
-  methods: {
-   
-    loadJson: function() {
-      this.showInfo = true;
-    },
-    getFireBaseData: function() {
-      // console.log(defaultApp.name); // "[DEFAULT]"
-      // console.log(defaultApp); // "[DEFAULT]"
-    },
-    getJson: function(){
-        // var _this = this;
-        // $.getJSON('https://shijie.000webhostapp.com/test.json', function (json) {
-        //     _this.json = json;
-        // });
+  // methods: {
+  //   async doThis(){
+  //     let comment = await fetch(this.firstAPI);
+  //     let json1 = await comment.json();
+  //     let post = await fetch(this.secondAPI);
+  //     let json2 = await post.json();
+  //     return {   
+  //       co: json1,
+  //       po: json2
+  //     }
+  //   },
+  //   loadJson: function() {
+  //     this.showInfo = true;
+  //   },
+  //   getFireBaseData: function() {
+  //     // console.log(defaultApp.name); // "[DEFAULT]"
+  //     // console.log(defaultApp); // "[DEFAULT]"
+  //   },
+  //   getJson: function(){
+  //       // var _this = this;
+  //       // $.getJSON('https://shijie.000webhostapp.com/test.json', function (json) {
+  //       //     _this.json = json;
+  //       // });
 
-          // $.ajax({
-          // // url: 'https://cors.io/?http://shijie.000webhostapp.com/test.json',
-          // url: 'https://shijie.000webhostapp.com/output.php',
-          // type: "GET", /* or type:"GET" or type:"PUT" */
-          // dataType: 'json',
-          // data: {
-          // },
-          // success: function (result) {
-          // console.log(result.posts);    
-          // _this.json = result;
-          // },
-          // error: function () {
-          // console.log("error");
-          // }
-          // });
+  //         // $.ajax({
+  //         // // url: 'https://cors.io/?http://shijie.000webhostapp.com/test.json',
+  //         // url: 'https://shijie.000webhostapp.com/output.php',
+  //         // type: "GET", /* or type:"GET" or type:"PUT" */
+  //         // dataType: 'json',
+  //         // data: {
+  //         // },
+  //         // success: function (result) {
+  //         // console.log(result.posts);    
+  //         // _this.json = result;
+  //         // },
+  //         // error: function () {
+  //         // console.log("error");
+  //         // }
+  //         // });
           
-    },
-  },
+  //         // fetch(this.firstAPI)
+  //         // .then(response => response.json())
+  //         // .then(json => console.log(json));
+
+
+  //         // fetch(this.secondAPI)
+  //         // .then(response => response.json())
+  //         // .then(json => console.log(json));
+  //         // console.log('hahaha');
+  //       //  this.doThis().
+  //       //  then(results => {
+  //       //    console.log(`what is the results now : ${JSON.stringify(results)}`);
+  //       //  }).catch(err => console.error(err));
+  //   },
+  // },
   beforeMount() {
     // this.getFireBaseData();
     // this.getJson();
@@ -109,6 +141,9 @@ export default {
   height: 800px;
 }
 .homepage-video-layer {
+}
+.home_new {
+  color: blue;
 }
 #featuredMovie {
   width: 100%;

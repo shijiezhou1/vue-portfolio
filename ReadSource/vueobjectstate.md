@@ -1,4 +1,7 @@
-Options / Lifecycle Hooks
+# Options / Lifecycle Hooks - Vue
+
+![](https://vuejsexamples.com/favicon.png)
+
 ```
 let vue = new Vue({
  el: '#app',

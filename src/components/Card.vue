@@ -16,5 +16,10 @@
 </template>
 
 <script>
-    
+// Code is missing export
+export default {
+    components: {
+        
+    }
+}
 </script>
