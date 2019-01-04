@@ -5,7 +5,7 @@
       <b-badge variant="secondary">SHIJIE</b-badge>
       <b-badge variant="success"> = </b-badge>
       <b-badge variant="danger">new</b-badge>
-      <b-badge variant="warning">Zhou</b-badge>
+      <b-badge variant="warning">ZHOU</b-badge>
       <b-badge variant="info">()</b-badge>
     </div>
    
