@@ -131,3 +131,13 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 ```
 ### fork and submit pull request
+
+
+### localize 
+
+on your env file, set up english as default, otherwise fallback to the zh;
+
+```
+VUE_APP_I18N_LOCALE=zh
+VUE_APP_I18N_FALLBACK_LOCALE=en
+```

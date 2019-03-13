@@ -15,9 +15,9 @@ import message from '../json/message.json';
 export default {
    data() {
     return {
-      about: message.homePage_zh.about,
-      home: message.homePage_zh.home,
-      project: message.homePage_zh.project
+      about: message.homePage_en.about,
+      home: message.homePage_en.home,
+      project: message.homePage_en.project
     }
    }
 }
