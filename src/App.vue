@@ -1,14 +1,27 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link class="App_title" to="/about">About</router-link> | 
-      <router-link class="App_title" to="/">Home</router-link> |
-      <router-link class="App_title" to="/project">Project</router-link>
+      <router-link class="App_title" to="/about">{{ this.about }}</router-link> | 
+      <router-link class="App_title" to="/">{{this.home}}</router-link> |
+      <router-link class="App_title" to="/project">{{this.project}}</router-link>
     </div>
     <router-view/>
   </div>
 </template>
 
+<script>
+import message from '../json/message.json';
+
+export default {
+   data() {
+    return {
+      about: message.homePage_zh.about,
+      home: message.homePage_zh.home,
+      project: message.homePage_zh.project
+    }
+   }
+}
+</script>
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

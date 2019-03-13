@@ -1,20 +1,9 @@
 <template>
   <div class="home">
-    <div>
-      <b-badge variant="primary">var</b-badge>
-      <b-badge variant="secondary">SHIJIE</b-badge>
-      <b-badge variant="success"> = </b-badge>
-      <b-badge variant="danger">new</b-badge>
-      <b-badge variant="warning">ZHOU</b-badge>
-      <b-badge variant="info">()</b-badge>
-    </div>
-   
+    <Header />
     <!-- Content here -->
-    <div>
-      <!-- <b-button class="" href="#">click to show json</b-button> -->
-    </div>
     <div class="showjson">{{ json }}</div>
-    <div class="homepage-video-layer">
+    <!-- <div class="homepage-video-layer">
       <video
         id="featuredMovie"
         preload="auto"
@@ -36,8 +25,8 @@
           type="video/ogg"
         >Your browser does not support the html video player.
       </video>
-    </div>
-    <b-container>
+    </div> -->
+    <!-- <b-container>
       <b-row>
         <b-col cols="3">
           <img
@@ -52,11 +41,12 @@
           >
         </b-col>
       </b-row>
-    </b-container>
+    </b-container> -->
   </div>
 </template>
 
 <script>
+import Header from '@/components/Header.vue';
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
 
@@ -71,7 +61,7 @@ export default {
   },
   name: "home",
   components: {
-    // HelloWorld
+    Header
   },
   // methods: {
   //   async doThis(){

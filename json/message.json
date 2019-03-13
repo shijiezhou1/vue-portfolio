@@ -1,0 +1,12 @@
+{
+  "homePage_en": {
+    "about": "About",
+    "project": "Project",
+    "home": "Home"
+  },
+  "homePage_zh": {
+    "about": "关于",
+    "project": "项目",
+    "home": "主页"
+  }
+}
