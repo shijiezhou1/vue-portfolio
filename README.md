@@ -9,6 +9,15 @@
 npm install
 ```
 
+## if the package broken, remove package-lock.json
+
+```
+rm -rf node_module 
+npm install
+npm audit fix
+```
+
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve

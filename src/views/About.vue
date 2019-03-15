@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div class="logo-wrap">
-      <a href="https://www.shijiezhou.com"><img alt="SZ logo" class="szlogo" src="../assets/logo j.gif"></a>
+      <a href="https://www.shijiezhou.com"><img alt="SZ logo" class="szlogo" src="../assets/logo_j.svg"></a>
     </div>
     
     <section id="footer">
@@ -33,7 +33,7 @@ export default {
 .szlogo {
   width: 100px;
   height: 95px;
-  border: 10px solid coral;
+  border: 2px solid lightskyblue;
 }
 
 .szlogo:hover{
