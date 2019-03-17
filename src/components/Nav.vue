@@ -1,6 +1,6 @@
 <template>
     <div class='nav-style'>
-        <router-link class="app-title" to='event-show'>Events</router-link> |
+        <router-link class="app-title" to='/event'>Events</router-link> |
         <router-link class="app-title" to="/about">{{ this.about }}</router-link> | 
         <router-link class="app-title" to="/">{{this.home}}</router-link> |
         <router-link class="app-title" :to="{ name: 'project'}" >{{this.project}}</router-link>

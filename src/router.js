@@ -14,12 +14,15 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
+      path: '*',
+      redirect: { name: '404', params: { resource: 'page' } }
+    },
+    {
       path: '/404',
       name: '404',
       component: NotFound,
       props: true
-    }
-    ,
+    },
     {
       path: '/',
       name: 'home',
@@ -36,24 +39,27 @@ export default new Router({
       component: Project
     },
     {
-      path: '/event/:id',
+      path: '/event',
       name: 'event-show',
       component: EventShow,
       props: true,
       beforeEnter(routeTo, routeFrom, next) {
-        store
-          .dispatch('events', routeTo)
-          .then(event => {
-            routeTo.params.event = event
-            next()
-          })
-          .catch(error => {
-            if (error.response && error.response.status == 404) {
-              next({ name: '404', params: { resource: 'event' } })
-            } else {
-              next({ name: 'network-issue' })
-            }
-          })
+        console.log(routeTo);
+        console.log(routeFrom);
+        console.log(next);
+        // store
+        //   .dispatch('event', routeTo)
+        //   .then(event => {
+        //     routeTo.params.event = event
+        //     next()
+        //   })
+        //   .catch(error => {
+        //     if (error.response && error.response.status == 404) {
+        //       next({ name: '404', params: { resource: 'event' } })
+        //     } else {
+        //       next({ name: 'network-issue' })
+        //     }
+        //   })
       }
     }
   ]
