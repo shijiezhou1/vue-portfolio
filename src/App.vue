@@ -1,27 +1,20 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link class="App_title" to="/about">{{ this.about }}</router-link> | 
-      <router-link class="App_title" to="/">{{this.home}}</router-link> |
-      <router-link class="App_title" to="/project">{{this.project}}</router-link>
-    </div>
-    <router-view/>
+    <Nav />
+    <router-view :key="$route.fullPath" />
   </div>
 </template>
 
 <script>
-import message from '../json/message.json';
+import Nav from '@/components/Nav.vue'
 
 export default {
-   data() {
-    return {
-      about: message.homePage_en.about,
-      home: message.homePage_en.home,
-      project: message.homePage_en.project
-    }
+   components: {
+     Nav
    }
 }
 </script>
+
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -29,14 +22,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.App_title{
-  color: grey;
-}
-#nav{ 
-  margin-bottom: 10px;
-  position: relative;
+  margin: 10px;
 }
 </style>

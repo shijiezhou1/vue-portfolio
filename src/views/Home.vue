@@ -4,7 +4,7 @@
     <!-- Content here -->
     <div class="showjson">{{ json }}</div>
     <hr>
-    <I18n />
+    <!-- <HelloI18n /> -->
     <!-- <div class="homepage-video-layer">
       <video
         id="featuredMovie"
@@ -49,7 +49,7 @@
 
 <script>
 import Header from '@/components/Header.vue';
-import I18n from '@/components/HelloI18n.vue';
+import HelloI18n from '@/components/HelloI18n.vue';
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
 
@@ -65,7 +65,7 @@ export default {
   name: "home",
   components: {
     Header,
-    I18n
+    HelloI18n
   },
   // methods: {
   //   async doThis(){

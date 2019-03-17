@@ -1,6 +1,6 @@
 module.exports = {
   baseUrl: "./",
-
+  
   pages: {
     index: {
       // entry for the page
@@ -25,8 +25,8 @@ module.exports = {
 
   pluginOptions: {
     i18n: {
-      // locale: 'zh',
-      // fallbackLocale: 'en',
+      locale: 'en',
+      fallbackLocale: 'zh',
       localeDir: 'locales',
       enableInSFC: true
     }

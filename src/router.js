@@ -1,11 +1,25 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+
+import NotFound from './views/NotFound.vue'
+import Home from './views/Home.vue';
+import About from './views/About.vue';
+import Project from './views/Project.vue';
+import EventShow from './views/EventShow.vue';
+
+import store from './store'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/404',
+      name: '404',
+      component: NotFound,
+      props: true
+    }
+    ,
     {
       path: '/',
       name: 'home',
@@ -14,12 +28,33 @@ export default new Router({
     {
       path: '/about',
       name: 'about',
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      component: About
     },
     {
       path: '/project',
       name: 'project',
-      component: () => import('./views/Project.vue')
+      component: Project
+    },
+    {
+      path: '/event/:id',
+      name: 'event-show',
+      component: EventShow,
+      props: true,
+      beforeEnter(routeTo, routeFrom, next) {
+        store
+          .dispatch('events', routeTo)
+          .then(event => {
+            routeTo.params.event = event
+            next()
+          })
+          .catch(error => {
+            if (error.response && error.response.status == 404) {
+              next({ name: '404', params: { resource: 'event' } })
+            } else {
+              next({ name: 'network-issue' })
+            }
+          })
+      }
     }
   ]
 })

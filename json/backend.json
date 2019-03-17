@@ -1,0 +1,9 @@
+{
+    "api": {
+        "heroku": "https://shijiezhou.herokuapp.com/"
+    },
+    "api": {
+        "localhost": "localhost:3000"
+    }
+  }
+  
