@@ -33,6 +33,7 @@
 export default {
   computed: { 
     count(){
+      console.log('count : ', this.$store.state.count);
       return this.$store.state.count
     }
   }

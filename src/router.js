@@ -7,11 +7,12 @@ import About from './views/About.vue';
 import Project from './views/Project.vue';
 import EventShow from './views/EventShow.vue';
 
-import store from './store'
+// import store from './store/store'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '*',

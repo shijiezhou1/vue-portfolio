@@ -1,8 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-
-// import modules that we need for front end
-import * as event from '@/modules/event.js';
+import * as event from '@/store/modules/event';
 
 Vue.use(Vuex);
 
@@ -29,5 +27,6 @@ export default new Vuex.Store({
       state.count++;
     }
   },
-  actions: {}
+  actions: {},
+  getters: {}
 });
