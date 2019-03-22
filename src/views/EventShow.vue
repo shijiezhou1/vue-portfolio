@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="event-header">
+    <div>this is event page</div>
+     <button v-on:click="count">Add 1</button>
+    <!-- <div class="event-header">
       <span class="eyebrow">@{{ event.time }} on {{ event.date | date }}</span>
       <h1 class="title">{{ event.title }}</h1>
       <h5>Organized by {{ event.organizer ? event.organizer.name : '' }}</h5>
@@ -24,17 +26,22 @@
       <li v-for="(attendee, index) in event.attendees" :key="index" class="list-item">
         <b>{{ attendee.name }}</b>
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 <script>
 export default {
-  props: {
-    event: {
-      type: Object,
-      required: true
+  computed: { 
+    count(){
+      return this.$store.state.count
     }
   }
+  // props: {
+  //   event: {
+  //     type: Object,
+  //     required: true
+  //   }
+  // }
 }
 </script>
 <style scoped>

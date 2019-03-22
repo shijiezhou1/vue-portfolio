@@ -1,11 +1,11 @@
-import EventService from '@/services/EventService.js'
+// import EventService from '@/services/EventService.js'
 
-export const namespaced = true
+// export const namespaced = true
 
-export const state = { 
-    events: [],
-    eventsTotal: 0,
-    event: {},
-    perPage: 3
-}
+// export const state = { 
+//     events: [],
+//     eventsTotal: 0,
+//     event: {},
+//     perPage: 3
+// }
 

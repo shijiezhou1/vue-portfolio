@@ -1,10 +1,10 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from 'vue';
+import Vuex from 'vuex';
 
-// import modules that we need for front end 
-import * as event from '@/modules/event.js'
+// import modules that we need for front end
+import * as event from '@/modules/event.js';
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
   // use modules for store
@@ -13,6 +13,7 @@ export default new Vuex.Store({
   },
 
   state: {
+    count: 0,
     categories: [
       'sustainability',
       'nature',
@@ -24,9 +25,9 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
-
+    increment(state) {
+      state.count++;
+    }
   },
-  actions: {
-
-  }
-})
+  actions: {}
+});

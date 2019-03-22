@@ -41,26 +41,7 @@ export default new Router({
     {
       path: '/event',
       name: 'event-show',
-      component: EventShow,
-      props: true,
-      beforeEnter(routeTo, routeFrom, next) {
-        console.log(routeTo);
-        console.log(routeFrom);
-        console.log(next);
-        // store
-        //   .dispatch('event', routeTo)
-        //   .then(event => {
-        //     routeTo.params.event = event
-        //     next()
-        //   })
-        //   .catch(error => {
-        //     if (error.response && error.response.status == 404) {
-        //       next({ name: '404', params: { resource: 'event' } })
-        //     } else {
-        //       next({ name: 'network-issue' })
-        //     }
-        //   })
-      }
+      component: EventShow
     }
   ]
 })
