@@ -1,31 +1,54 @@
 <template>
-  <div class="project">
-    <div class="container">
-      <div class="row about_cardStyle">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </div>
-    </div>
+  <div>
+    <!-- <div v-for="(value, key) in posts">
+        {{ value }}
+    </div> -->
+    <div>LATEST</div>
+    <hr>
+    <PostCard v-for="post in posts" :key="post.id" :post="post" />
+    
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import Card from "@/components/Card.vue"
+import { mapState } from 'vuex'
+import store from '@/store/store'
+import PostCard from "@/components/PostCard.vue"
+
+function getNewPosts(routeTo, next) {
+  store.dispatch('medium/fetchPosts').then(() => {
+    next()
+  })
+}
 
 export default {
+  data: function() {
+    return {
+      posts: store.state.medium.posts
+    } 
+  },
+  props: {
+    // page: {
+    //   type: Number,
+    //   required: true
+    // }
+  },
   components: {
-    Card
+    PostCard
+  },
+  beforeRouteEnter(routeTo, routeFrom, next) {
+    getNewPosts(routeTo, next)
+  },
+  beforeRouteUpdate(routeTo, routeFrom, next) {
+    getNewPosts(routeTo, next)
+  },
+  computed: {
+    hasNextPage() {
+      return this.event.eventsTotal > this.page * this.event.perPage
+    },
+    ...mapState(['medium'])
+  },
+  methods: {
   }
-};
-</script>
-
-<style scoped>
-.about_cardStyle{
-  margin: 0px auto;
-  padding: 10px;
 }
-</style>
+</script>

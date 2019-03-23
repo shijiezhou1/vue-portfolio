@@ -1,5 +1,7 @@
 module.exports = {
-  baseUrl: "./",
+  publicPath: process.env.NODE_ENV === 'production'
+  ? '/vue-portfolio/'
+  : '/vue-portfolio/',
   
   pages: {
     index: {

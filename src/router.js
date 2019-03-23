@@ -5,8 +5,6 @@ import NotFound from './views/NotFound.vue'
 import Home from './views/Home.vue';
 import About from './views/About.vue';
 import Project from './views/Project.vue';
-import EventList from './views/EventList.vue'
-import store from './store/store';
 
 // import store from './store/store'
 
@@ -14,11 +12,12 @@ Vue.use(Router)
 
 export default new Router({
   mode: 'history',
+  base: '/vue-portfolio/',
   routes: [
-    {
-      path: '*',
-      redirect: { name: '404', params: { resource: 'page' } }
-    },
+    // {
+    //   path: '*',
+    //   redirect: { name: '404', params: { resource: 'page' } }
+    // },
     {
       path: '/404',
       name: '404',
@@ -39,11 +38,6 @@ export default new Router({
       path: '/project',
       name: 'project',
       component: Project
-    },
-    {
-      path: '/event',
-      name: 'event',
-      component: EventList,
     }
   ]
 })

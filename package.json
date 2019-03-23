@@ -55,5 +55,6 @@
     "last 2 versions",
     "not ie <= 8"
   ],
-  "homepage": "https://github.com/shijiezhou1/vue-portfolio"
+  "homepage": "https://github.com/shijiezhou1/vue-portfolio",
+  "wst": "docs"
 }

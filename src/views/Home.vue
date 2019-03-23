@@ -4,7 +4,7 @@
     <!-- Content here -->
     <div class="showjson">{{ json }}</div>
     <hr>
-    <!-- <HelloI18n /> -->
+    <HelloI18n />
     <!-- <div class="homepage-video-layer">
       <video
         id="featuredMovie"

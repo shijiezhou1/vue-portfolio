@@ -1,26 +1,26 @@
 <template>
-  <router-link
-    class="event-link"
-    :to="post.text.url"
+  <a
+    class="post-link"
+    :href="post.text.url"
     :id="post._id"
   >
-    <b-container class="event-card -shadow">
+    <b-container class="post-card -shadow">
       <b-row class="justify-content-md-center">
         <b-col lg="4" cols="8">
-          <div class="event-title">{{ post.text.title }}</div>
-          <div class="event-desc">{{ post.text.description }}</div>
+          <div class="post-title">{{ post.text.title }}</div>
+          <div class="post-desc">{{ post.text.description }}</div>
           <span class="eyebrow">@{{post.createdAt}}</span>
         </b-col>
         <b-col lg="2" cols="4">
           <img
-            class="event-image"
+            class="post-image"
             :src="post.text.image"
             alt="no image"
           >
         </b-col>
       </b-row>
     </b-container>
-  </router-link>
+  </a>
 </template>
 
 <script>
@@ -32,33 +32,33 @@ export default {
 </script>
 
 <style scoped>
-.event-card {
+.post-card {
   padding: 20px;
   margin-bottom: 24px;
   transition: all 0.2s linear;
   cursor: pointer;
 }
-.event-card:hover {
+.post-card:hover {
   transform: scale(1.01);
   box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
 }
-.event-card > .title {
+.post-card > .title {
   margin: 0;
 }
-.event-link {
+.post-link {
   color: black;
   text-decoration: none;
   font-weight: 100;
 }
-.event-title{
+.post-title{
     font-size: 100%;
     font-weight: bold;
 }
-.event-desc{
+.post-desc{
     line-height: 1;
     font-size: 80%;
 }
-.event-image {
+.post-image {
   width: 100%;
 }
 </style>
