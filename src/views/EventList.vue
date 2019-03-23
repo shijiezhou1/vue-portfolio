@@ -1,41 +1,39 @@
 <template>
   <div>
-    <button class="btn btn-primary" v-on:click="greet">Greet</button>
+    <h1>POST LISTS:</h1>
+    <button
+      class="btn btn-primary"
+      v-on:click="greet"
+    >Greet</button>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import store from '@/store/store'
-import axios from 'axios'
 
-function getPageEvents(routeTo, next) {
-  const currentPage = parseInt(routeTo.query.page) || 1
-  store
-    .dispatch('event/fetchEvents', {
-      page: currentPage
-    })
-    .then(() => {
-      routeTo.params.page = currentPage
-      next()
-    })
+function getNewPosts(routeTo, next) {
+  console.log('in this posts page');
+  store.dispatch('medium/fetchPosts').then(() => {
+    next()
+  })
 }
 
 export default {
   props: {
-    page: {
-      type: Number,
-      required: true
-    }
+    // page: {
+    //   type: Number,
+    //   required: true
+    // }
   },
   components: {
- 
+
   },
   beforeRouteEnter(routeTo, routeFrom, next) {
-    getPageEvents(routeTo, next)
+    getNewPosts(routeTo, next)
   },
   beforeRouteUpdate(routeTo, routeFrom, next) {
-    getPageEvents(routeTo, next)
+    getNewPosts(routeTo, next)
   },
   computed: {
     hasNextPage() {
@@ -44,12 +42,9 @@ export default {
     ...mapState(['event'])
   },
   methods: {
-      greet: function(){
-        // WORKS
-        axios.get('https://shijiezhou.herokuapp.com/post').then(res => {
-          console.log(res.data);
-        })
-      }
+    greet: function () {
+
+    }
   }
 }
 </script>

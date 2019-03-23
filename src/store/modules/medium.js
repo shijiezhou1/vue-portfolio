@@ -1,32 +1,26 @@
-import MediumService from '@/services/MediumService.js';
+import EventService from '@/services/EventService.js';
+
+export const namespaced = true;
 
 export const state = {
-    posts: [],
-    postsTotal: 0,
-    post: {},
-    perPage: 3
-}
+  posts: []
+};
 
-export const mutations = { 
-    SET_POSTS(state, po){
-        state.posts.push(po)
-    },
-    SET_POST(state, po){
-        state.posts = po
-    }
-}
+export const mutations = {
+  SET_POSTS(state, post) {
+    state.posts = post;
+  }
+};
 
-export const actions = { 
-    fetchPosts({ commit, dispatch } ){
-        return MediumService.getPosts()
-        .then(res => {
-            commit('SET_POSTS', res.data)
-        }).catch( err => {
-
-        });
-    }
-}
-
-export const getters = { 
-
-}
+export const actions = {
+  fetchPosts({ commit, state }) {
+    return EventService.getPosts()
+      .then(response => {
+        commit('SET_POSTS', response.data);
+        return response.data;
+      })
+      .catch(error => {
+        dispatch('notification/add', notification, { root: true });
+      });
+  }
+};
