@@ -1,25 +1,32 @@
 <template>
   <div>
-    <h1>POST LISTS:</h1>
-    <button
-      class="btn btn-primary"
-      v-on:click="greet"
-    >Greet</button>
+    <!-- <div v-for="(value, key) in posts">
+        {{ value }}
+    </div> -->
+    <div>LATEST</div>
+    <hr>
+    <PostCard v-for="post in posts" :key="post.id" :post="post" />
+    
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import store from '@/store/store'
+import PostCard from "@/components/PostCard.vue"
 
 function getNewPosts(routeTo, next) {
-  console.log('in this posts page');
   store.dispatch('medium/fetchPosts').then(() => {
     next()
   })
 }
 
 export default {
+  data: function() {
+    return {
+      posts: store.state.medium.posts
+    } 
+  },
   props: {
     // page: {
     //   type: Number,
@@ -27,7 +34,7 @@ export default {
     // }
   },
   components: {
-
+    PostCard
   },
   beforeRouteEnter(routeTo, routeFrom, next) {
     getNewPosts(routeTo, next)
@@ -39,12 +46,9 @@ export default {
     hasNextPage() {
       return this.event.eventsTotal > this.page * this.event.perPage
     },
-    ...mapState(['event'])
+    ...mapState(['medium'])
   },
   methods: {
-    greet: function () {
-
-    }
   }
 }
 </script>
