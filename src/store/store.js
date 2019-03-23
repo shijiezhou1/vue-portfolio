@@ -1,17 +1,16 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import * as event from '@/store/modules/event';
+import * as medium from '@/store/modules/medium';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  // use modules for store
   modules: {
-    event
+    event,
+    medium
   },
-
   state: {
-    count: 0,
     categories: [
       'sustainability',
       'nature',
@@ -21,12 +20,5 @@ export default new Vuex.Store({
       'food',
       'community'
     ]
-  },
-  mutations: {
-    increment(state) {
-      state.count++;
-    }
-  },
-  actions: {},
-  getters: {}
+  }
 });
