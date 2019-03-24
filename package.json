@@ -10,10 +10,16 @@
     "gh": "node ./node_modules/vue-gh-pages/index.js --branch gh-pages"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-brands-svg-icons": "^5.8.1",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/vue-fontawesome": "^0.1.6",
     "axios": "^0.18.0",
     "dns": "^0.2.2",
+    "i": "^0.3.6",
     "module": "^1.2.5",
     "mongodb": "^3.1.10",
+    "npm": "^6.9.0",
     "vue": "^2.5.17",
     "vue-i18n": "^8.0.0",
     "vue-router": "^3.0.1",

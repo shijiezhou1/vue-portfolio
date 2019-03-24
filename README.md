@@ -160,3 +160,12 @@ VUE_APP_I18N_FALLBACK_LOCALE=en
 mode: 'history', // REMOVE IF YOU WANT TO DEPLOY IN GITHUB
 base: '/vue-portfolio/'
 ```
+
+### How to Install and Use
+
+```
+npm i --save @fortawesome/fontawesome-svg-core \
+npm i --save @fortawesome/free-solid-svg-icons \
+npm i --save @fortawesome/free-brands-svg-icons \
+npm i --save @fortawesome/vue-fontawesome
+```

@@ -3,8 +3,10 @@
     <Header />
     <!-- Content here -->
     <div class="showjson">{{ json }}</div>
+    <SocialMedia />
     <hr>
-    <HelloI18n />
+    <!-- <HelloI18n /> -->
+
     <!-- <div class="homepage-video-layer">
       <video
         id="featuredMovie"
@@ -50,6 +52,7 @@
 <script>
 import Header from '@/components/Header.vue';
 import HelloI18n from '@/components/HelloI18n.vue';
+import SocialMedia from '@/components/SocialMedia.vue'
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
 
@@ -65,7 +68,8 @@ export default {
   name: "home",
   components: {
     Header,
-    HelloI18n
+    HelloI18n,
+    SocialMedia
   },
   // methods: {
   //   async doThis(){
@@ -133,8 +137,6 @@ export default {
 <style scoped>
 .home {
   height: 800px;
-}
-.homepage-video-layer {
 }
 .home_new {
   color: blue;
