@@ -11,7 +11,6 @@ import Project from './views/Project.vue';
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
   base: '/vue-portfolio/',
   routes: [
     // {

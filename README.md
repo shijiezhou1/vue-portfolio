@@ -161,3 +161,10 @@ on your env file, set up english as default, otherwise fallback to the zh;
 VUE_APP_I18N_LOCALE=zh
 VUE_APP_I18N_FALLBACK_LOCALE=en
 ```
+
+### REFRESH ISSUE TURN ON
+
+```
+mode: 'history', // REMOVE IF YOU WANT TO DEPLOY IN GITHUB
+base: '/vue-portfolio/'
+```
