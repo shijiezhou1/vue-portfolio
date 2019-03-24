@@ -4,6 +4,8 @@
 
 # vue-portfolio
 
+<a href="https://shijiezhou1.github.io/vue-portfolio/#/">https://shijiezhou1.github.io/vue-portfolio/#/</a>
+
 
 ## Project setup
 ```
