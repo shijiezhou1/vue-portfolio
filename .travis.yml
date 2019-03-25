@@ -3,11 +3,9 @@ nodejs:
 - 11.11.0
 cache: npm
 
-install: 
-  - npm install
-
 script:
-  - npm run build
+  - npm install
+  - npm run gh
 
 deploy: 
   provider: pages
