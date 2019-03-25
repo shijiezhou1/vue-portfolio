@@ -4,7 +4,7 @@ nodejs:
 cache: npm
 
 script:
-  - npm run gh
+  - npm install
 
 # deploy: 
 #   provider: pages
