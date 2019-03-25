@@ -4,7 +4,7 @@ nodejs:
 cache: npm
 
 install: 
-  - npm ci
+  - npm install
 
 script:
   - npm run build
