@@ -1,0 +1,28 @@
+language: nodejs
+nodejs: 
+- 11.11.0
+cache: npm
+
+install: 
+  - npm ci
+
+script:
+  - npm run build
+
+deploy: 
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: gh-pages
+
+# before_install:
+# install:
+# before_script:
+# script:
+# after_success:
+# after_failure:
+# after_script:
+# before_deploy:
+# deploy:
+# after_deploy:
