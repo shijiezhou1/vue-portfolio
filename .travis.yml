@@ -4,15 +4,14 @@ nodejs:
 cache: npm
 
 script:
-  - npm install
   - npm run gh
 
-deploy: 
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  on:
-    branch: gh-pages
+# deploy: 
+#   provider: pages
+#   skip-cleanup: true
+#   github-token: $GITHUB_TOKEN
+#   on:
+#     branch: gh-pages
 
 # before_install:
 # install:
