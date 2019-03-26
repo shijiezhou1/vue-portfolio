@@ -5,6 +5,7 @@
         <a class="home_icon" href="https://www.facebook.com/profile.php?id=100003975309210" target="_blank"><font-awesome-icon :icon="['fab', 'facebook']" /></a>
         <a class="home_icon" href="https://medium.com/@cs5129606" target="_blank"><font-awesome-icon :icon="['fab', 'medium']" /></a>
         <a class="home_icon" href="https://shijiezhou.tumblr.com/" target="_blank"><font-awesome-icon :icon="['fab', 'tumblr-square']" /></a>
+        <a class="home_icon" href="https://shijiezhou.tumblr.com/" target="_blank"><font-awesome-icon :icon="['fas', 'rss']" /></a>
       </b-container>
     </b-row>
 </template>
