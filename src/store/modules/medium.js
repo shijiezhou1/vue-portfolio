@@ -20,6 +20,7 @@ export const actions = {
         return response.data;
       })
       .catch(error => {
+        const notification = '';
         dispatch('notification/add', notification, { root: true });
       });
   }

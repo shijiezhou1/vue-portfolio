@@ -13,10 +13,10 @@ Vue.use(Router);
 export default new Router({
   base: '/vue-portfolio/',
   routes: [
-    // {
-    //   path: '*',
-    //   redirect: { name: '404', params: { resource: 'page' } }
-    // },
+    {
+      path: '*',
+      redirect: { name: '404', params: { resource: 'page' } }
+    },
     {
       path: '/404',
       name: '404',
@@ -41,7 +41,9 @@ export default new Router({
     {
       path: '/sitemap',
       name: 'sitemap',
-      redirect: '/sitemap.xml'
+      beforeEnter() {
+        location.href = 'https://shijiezhou.herokuapp.com/rss.xml';
+      }
     }
   ]
 });
