@@ -1,4 +1,4 @@
-import EventService from '@/services/EventService.js';
+import MediumService from "../../services/MediumService";
 
 export const namespaced = true;
 
@@ -14,7 +14,7 @@ export const mutations = {
 
 export const actions = {
   fetchPosts({ commit, state }) {
-    return EventService.getPosts()
+    return MediumService.getPosts()
       .then(response => {
         commit('SET_POSTS', response.data);
         return response.data;

@@ -5,7 +5,6 @@ import NotFound from './views/NotFound.vue';
 import Home from './views/Home.vue';
 import About from './views/About.vue';
 import Project from './views/Project.vue';
-import Sitemap from './views/Sitemap.vue';
 
 // import store from './store/store'
 
@@ -42,7 +41,7 @@ export default new Router({
     {
       path: '/sitemap',
       name: 'sitemap',
-      component: Sitemap
+      redirect: '/sitemap.xml'
     }
   ]
 });
