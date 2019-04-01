@@ -1,14 +1,15 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from 'vue';
+import Router from 'vue-router';
 
-import NotFound from './views/NotFound.vue'
+import NotFound from './views/NotFound.vue';
 import Home from './views/Home.vue';
 import About from './views/About.vue';
 import Project from './views/Project.vue';
+import Sitemap from './views/Sitemap.vue';
 
 // import store from './store/store'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   base: '/vue-portfolio/',
@@ -37,6 +38,11 @@ export default new Router({
       path: '/project',
       name: 'project',
       component: Project
+    },
+    {
+      path: '/sitemap',
+      name: 'sitemap',
+      component: Sitemap
     }
   ]
-})
+});
