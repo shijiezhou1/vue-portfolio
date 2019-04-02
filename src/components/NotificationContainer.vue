@@ -6,6 +6,7 @@
 
 <style scoped>
 .notification-container{
+    display: none; /*remove when you have notification*/
     position: fixed;
     top: 0;
     right: 0;
