@@ -23,6 +23,7 @@ jobs:
 script:
   - npm i
   - npm run build
+  - git remote add origin https://github.com/shijiezhou1/vue-portfolio.git
   - npm run gh
 
 deploy: 
