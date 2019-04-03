@@ -13,23 +13,21 @@ before_script:
   # Install Webpack version
   - if [[ -n "$WEBPACK_VERSION" ]]; then npm install --no-save webpack@$WEBPACK_VERSION; fi
 
-jobs:
-  include:
-    - stage: build
-      script:
-        # run build
-        - npm run build
-        - npm 
 script:
   - npm i
   - npm run build
   - git remote add origin https://github.com/shijiezhou1/vue-portfolio.git
   - npm run gh
 
+branches:
+  only:
+    - gh-pages
+
 deploy: 
   provider: pages
   skip-cleanup: true
   local_dir: dist/
+  keep_history: true
   github-token: $GITHUB_TOKEN
   on:
     branch: gh-pages
