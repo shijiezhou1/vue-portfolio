@@ -1,19 +1,34 @@
-language: nodejs
-nodejs: 
-- 11.11.0
-cache: npm
+language: node_js
+node_js:
+  - "11"
+  - "node"
+env:
+  - WEBPACK_VERSION= # Current, from package.json
+  - WEBPACK_VERSION=4
+install:
+  # Use npm 5.7.x since it has introduced `npm ci`
+  - if [[ `npm -v` != 5.7* ]]; then npm install -g npm@'>=5.7.1'; fi
+  - npm ci
+before_script:
+  # Install Webpack version
+  - if [[ -n "$WEBPACK_VERSION" ]]; then npm install --no-save webpack@$WEBPACK_VERSION; fi
 
+jobs:
+  include:
+    - stage: build
+      script:
+        # run build
+        - npm run build
+        - npm 
 script:
-  - npm i -g install
-  - npm i -g webpack
-  - npm i -g vue-cli-service
-  - npm install
+  - npm i
   - npm run build
   - npm run gh
 
 deploy: 
   provider: pages
   skip-cleanup: true
+  local_dir: dist/
   github-token: $GITHUB_TOKEN
   on:
     branch: gh-pages
