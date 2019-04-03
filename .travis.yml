@@ -4,14 +4,19 @@ nodejs:
 cache: npm
 
 script:
+  - npm i -g install
+  - npm i -g webpack
+  - npm i -g vue-cli-service
   - npm install
+  - npm run build
+  - npm run gh
 
-# deploy: 
-#   provider: pages
-#   skip-cleanup: true
-#   github-token: $GITHUB_TOKEN
-#   on:
-#     branch: gh-pages
+deploy: 
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: gh-pages
 
 # before_install:
 # install:
