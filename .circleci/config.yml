@@ -28,9 +28,8 @@ jobs:
           command: npm run build
       - run:
           name: Tell myName
-          command:
-            - git config --global user.email "cs5129606@gmail.com"
-            - git config --global user.name "shijiezhou1"
+          command: git config --global user.email "cs5129606@gmail.com"
+          command: git config --global user.name "shijiezhou1"
       - run:
           name: Run deploy scripts
           command: npm run gh
