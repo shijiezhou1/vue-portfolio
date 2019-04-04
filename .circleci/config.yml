@@ -1,16 +1,16 @@
-  docs-deploy:
-    docker:
-      - image: node:8.10.0
-    steps:
-      - checkout
-      - attach_workspace:
-          at: dist/
-      - run:
-          name: Install and configure dependencies
-          command: |
-            npm install -g --silent gh-pages@2.0.1
-            git config user.email "cs5129606@gmail.com"
-            git config user.name "shijiezhou1"
-      - run:
-          name: Deploy docs to gh-pages branch
-          command: gh-pages --dist dist/
+docs-deploy:
+  docker:
+    - image: node:8.10.0
+  steps:
+    - checkout
+    - attach_workspace:
+        at: dist/
+    - run:
+        name: Install and configure dependencies
+        command: |
+          npm install -g --silent gh-pages@2.0.1
+          git config user.email "cs5129606@gmail.com"
+          git config user.name "shijiezhou1"
+    - run:
+        name: Deploy docs to gh-pages branch
+        command: gh-pages --dist dist/
