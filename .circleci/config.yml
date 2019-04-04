@@ -27,8 +27,10 @@ jobs:
           name: Github build site
           command: npm run build
       - run:
-          name: Tell myName
+          name: Tell email
           command: git config --global user.email "cs5129606@gmail.com"
+      - run:
+          name: Tell name
           command: git config --global user.name "shijiezhou1"
       - run:
           name: Run deploy scripts
