@@ -2,7 +2,7 @@ script:
   - bash ./scripts/deploy-to-gh-pages.sh
 env:
   global:
-    - GITHUB_REPO: "user/repo"
+    - GITHUB_REPO: "shijiezhou1/vue-portfolio"
 
 # language: node_js
 # node_js:

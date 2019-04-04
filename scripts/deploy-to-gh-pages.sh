@@ -1,5 +1,7 @@
 set -o errexit
 
+npm i
+
 rm -rf public
 mkdir public
 
