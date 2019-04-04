@@ -1,17 +1,9 @@
-language: node_js
-node_js:
-  - "stable"
-cache:
-  directories:
-  - node_modules
-before_script:
-- npm install -g --silent
-
 script:
-- npm run build
+  - bash ./scripts/deploy-to-gh-pages.sh
+env:
+  global:
+    - GITHUB_REPO: "user/repo"
 
-after_script:
-- npm run gh
 # language: node_js
 # node_js:
 #   - "11"
