@@ -1,16 +1,31 @@
-docs-deploy:
-  docker:
-    - image: node:8.10.0
-  steps:
-    - checkout
-    - attach_workspace:
-        at: dist/
-    - run:
-        name: Install and configure dependencies
-        command: |
-          npm install -g --silent gh-pages@2.0.1
-          git config user.email "cs5129606@gmail.com"
-          git config user.name "shijiezhou1"
-    - run:
-        name: Deploy docs to gh-pages branch
-        command: gh-pages --dist dist/
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:latest
+    filters:
+      branches:
+        only: gh-pages
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "01:e8:89:2e:26:86:42:c7:6b:67:ca:ae:b3:a7:f6:21"
+      - checkout
+      - restore_cache:
+          keys:
+          - dependencies-
+          # fallback to using the latest cache if no exact match is found
+          - dependencies-
+      - run:
+          name: Install
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: dependencies-
+      - run:
+          name: Github build site
+          command: npm run build
+      - run:
+          name: Run deploy scripts
+          command: npm run gh
