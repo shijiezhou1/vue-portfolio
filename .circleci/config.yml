@@ -35,6 +35,3 @@ jobs:
       - run:
           name: Run deploy scripts
           command: npm run gh
-      - run: 
-          name: Skip gh
-          command: exit
