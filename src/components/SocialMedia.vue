@@ -17,6 +17,6 @@
     color: grey;
 }
 .home_icon:hover {
-    color: blue;
+    color: green;
 }
 </style>
