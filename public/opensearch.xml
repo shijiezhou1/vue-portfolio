@@ -1,0 +1,8 @@
+<opensearchdescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <shortname>Shijie Zhou</shortname>
+  <description>Search Shijie Zhou's Blog</description>
+  <url type="text/html" method="get" template="http://www.shijiezhou.com/blog?q={searchTerms}">
+  <img width="16" height="16">http://www.shijiezhou.com/favicon.ico
+  <inputencoding>UTF-8</inputencoding>
+  <searchform>http://www.shijiezhou.com/</searchform>
+</url></opensearchdescription>
