@@ -18,12 +18,12 @@
     "dns": "^0.2.2",
     "i": "^0.3.6",
     "module": "^1.2.5",
-    "mongodb": "^3.1.10",
+    "mongodb": "^3.2.3",
     "npm": "^6.9.0",
     "vue": "^2.6.10",
     "vue-i18n": "^8.10.0",
     "vue-router": "^3.0.5",
-    "vuex": "^3.0.1"
+    "vuex": "^3.1.0"
   },
   "devDependencies": {
     "@kazupon/vue-i18n-loader": "^0.3.0",
@@ -33,7 +33,7 @@
     "babel-eslint": "^10.0.1",
     "bootstrap-vue": "^2.0.0-rc.18",
     "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0-0",
+    "eslint-plugin-vue": "^5.2.2",
     "vue-cli-plugin-i18n": "^0.6.0",
     "vue-gh-pages": "^1.19.0",
     "vue-template-compiler": "^2.6.10"
