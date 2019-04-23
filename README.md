@@ -160,7 +160,7 @@ when you set the mode to history, gh-page won't get the correct path.
 mode: 'history', // REMOVE IF YOU WANT TO DEPLOY IN GITHUB
 base: '/vue-portfolio/'
 ```
-<img width="120" src="https://images.app.goo.gl/LEZtydTEj9Y2qBbx6" alt="icons">
+<img width="120" src="https://www.drupal.org/files/project-images/font_awesome_logo.png" alt="icons">
 
 
 ### How to Install and Use
