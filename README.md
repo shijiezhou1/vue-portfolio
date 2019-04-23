@@ -142,10 +142,8 @@ Vue.use(BootstrapVue);
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 ```
-### fork and submit pull request
 
-
-### localize 
+### Localize Setup
 
 on your env file, set up english as default, otherwise fallback to the zh;
 
@@ -154,12 +152,16 @@ VUE_APP_I18N_LOCALE=zh
 VUE_APP_I18N_FALLBACK_LOCALE=en
 ```
 
-### REFRESH ISSUE TURN ON
+### REFRESH ISSUE in Deployment
+
+when you set the mode to history, gh-page won't get the correct path.
 
 ```
 mode: 'history', // REMOVE IF YOU WANT TO DEPLOY IN GITHUB
 base: '/vue-portfolio/'
 ```
+<img width="120" src="https://images.app.goo.gl/LEZtydTEj9Y2qBbx6" alt="icons">
+
 
 ### How to Install and Use
 
