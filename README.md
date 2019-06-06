@@ -1,6 +1,35 @@
+
+
 <img width="120" src="https://vuejs.org/images/logo.png" alt="Vue LOGO"/>
 
 ![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [vue-portfolio](#vue-portfolio)
+  - [Project setup](#project-setup)
+  - [if the package broken, remove package-lock.json](#if-the-package-broken-remove-package-lockjson)
+    - [Compiles and hot-reloads for development](#compiles-and-hot-reloads-for-development)
+    - [Compiles and minifies for production](#compiles-and-minifies-for-production)
+    - [Run your tests](#run-your-tests)
+    - [Lints and fixes files](#lints-and-fixes-files)
+    - [Run your unit tests](#run-your-unit-tests)
+    - [Customize configuration](#customize-configuration)
+- [vue-live (user Guide)](#vue-live-user-guide)
+    - [1. Deploy project to your github](#1-deploy-project-to-your-github)
+    - [2. Add the following to the script section of your package.json:](#2-add-the-following-to-the-script-section-of-your-packagejson)
+    - [3. Add homepage field to your package.json file:](#3-add-homepage-field-to-your-packagejson-file)
+    - [4. Now when you're ready to push to github, run:](#4-now-when-youre-ready-to-push-to-github-run)
+    - [5. Update direction](#5-update-direction)
+    - [MongoDB Setup](#mongodb-setup)
+- [Style](#style)
+    - [Add to src/main.js](#add-to-srcmainjs)
+    - [Localize Setup](#localize-setup)
+    - [REFRESH ISSUE in Deployment](#refresh-issue-in-deployment)
+    - [How to Install and Use](#how-to-install-and-use)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # vue-portfolio
 
