@@ -5,7 +5,7 @@
     <div class="showjson">{{ json }}</div>
     <SocialMedia />
     <hr>
-    <!-- <HelloI18n /> -->
+    <HelloI18n />
 
     <!-- <div class="homepage-video-layer">
       <video
@@ -77,7 +77,7 @@ export default {
   //     let json1 = await comment.json();
   //     let post = await fetch(this.secondAPI);
   //     let json2 = await post.json();
-  //     return {   
+  //     return {
   //       co: json1,
   //       po: json2
   //     }
@@ -103,14 +103,14 @@ export default {
   //         // data: {
   //         // },
   //         // success: function (result) {
-  //         // console.log(result.posts);    
+  //         // console.log(result.posts);
   //         // _this.json = result;
   //         // },
   //         // error: function () {
   //         // console.log("error");
   //         // }
   //         // });
-          
+
   //         // fetch(this.firstAPI)
   //         // .then(response => response.json())
   //         // .then(json => console.log(json));

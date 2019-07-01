@@ -14,14 +14,18 @@ export const mutations = {
 
 export const actions = {
   fetchPosts({ commit, state }) {
+    //TODO FIX
+    state;
     return MediumService.getPosts()
       .then(response => {
         commit('SET_POSTS', response.data);
         return response.data;
-      })
-      .catch(error => {
-        const notification = '';
-        dispatch('notification/add', notification, { root: true });
+      }).catch((error)=>{
+          //TODO ADD
+          error;
+          // const notification = '' + error;
+          // dispatch('notification/add', notification, { root: true });
       });
+
   }
 };

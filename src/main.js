@@ -24,7 +24,7 @@ Vue.config.productionTip = false;
 new Vue({
   created: function () {
     // `this` points to the vm instance
-    console.dir('vue object create')
+    // console.dir('vue object create')
   },
   router,
   store,
