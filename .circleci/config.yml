@@ -3,38 +3,24 @@ jobs:
   build:
     docker:
       - image: circleci/node:latest
-    filters:
-      branches:
-        only: gh-pages
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "01:e8:89:2e:26:86:42:c7:6b:67:ca:ae:b3:a7:f6:21"
       - checkout
-      - restore_cache:
-          keys:
-          - dependencies-
-          # fallback to using the latest cache if no exact match is found
-          - dependencies-
+      - attach_workspace:
+          at: dist/
       - run:
-          name: Install
-          command: npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: dependencies-
+        name: Install
+        command: npm run install
       - run:
-          name: Github build site
-          command: npm run build
+        name: Build
+        command: npm run build
       - run:
-          name: Tell email
-          command: git config --global user.email "cs5129606@gmail.com"
+        name:
       - run:
-          name: Tell name
-          command: git config --global user.name "shijiezhou1"
+          name: Install and configure dependencies
+          command: |
+            npm install -g --silent gh-pages@2.0.1
+            git config user.email "cs5129606@gmail.com"
+            git config user.name "shijiezhou1"
       - run:
-          name: Run deploy scripts
-          command: npm run gh
-      - run:
-          name: skip
-          command: git commit -m 'deploy [ci skip]'
+          name: Deploy docs to gh-pages branch
+          command: gh-pages --dist dist/index.html
