@@ -9,7 +9,7 @@ jobs:
           at: dist/
       - run:
           name: Install
-          command: npm run install
+          command: npm install
       - run:
           name: Build
           command: npm run build
