@@ -1,26 +1,26 @@
 version: 2
 jobs:
-  build:
-    docker:
-      - image: circleci/node:latest
-    steps:
-      - checkout
-      - attach_workspace:
-          at: dist/
-      - run:
-        name: Install
-        command: npm run install
-      - run:
-        name: Build
-        command: npm run build
-      - run:
-        name:
-      - run:
-          name: Install and configure dependencies
-          command: |
-            npm install -g --silent gh-pages@2.0.1
-            git config user.email "cs5129606@gmail.com"
-            git config user.name "shijiezhou1"
-      - run:
-          name: Deploy docs to gh-pages branch
-          command: gh-pages --dist dist/index.html
+    build:
+        docker:
+            - image: circleci/node:latest
+        steps:
+            - checkout
+            - attach_workspace:
+                  at: dist/
+            - run:
+              name: Install
+              command: npm run install
+            - run:
+              name: Build
+              command: npm run build
+            - run:
+              name:
+            - run:
+                  name: Install and configure dependencies
+                  command: |
+                      npm install -g --silent gh-pages@2.0.1
+                      git config user.email "cs5129606@gmail.com"
+                      git config user.name "shijiezhou1"
+            - run:
+                  name: Deploy docs to gh-pages branch
+                  command: gh-pages --dist dist/index.html
