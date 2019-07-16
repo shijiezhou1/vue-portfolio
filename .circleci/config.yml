@@ -13,6 +13,6 @@ jobs:
       - run:
           name: Build
           command: npm run build
-      - deploy:
+      - run:
           name: Deploy Release to GitHub
           command: ./setup-github.sh
