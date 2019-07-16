@@ -22,6 +22,9 @@ jobs:
             npm install -g --silent gh-pages@2.0.1
             git config user.email "cs5129606@gmail.com"
             git config user.name "shijiezhou1"
-      - run:
-          name: Deploy docs to gh-pages branch
-          command: gh-pages --dist dist/index.html
+      - deploy:
+          name: Deploy Release to GitHub
+          command: |
+            if [ $CIRCLE_BRANCH == 'develop' ]; then
+              bash .circleci/setup-github.sh
+            fi
