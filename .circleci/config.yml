@@ -1,18 +1,28 @@
 version: 2
+nightly:
+  triggers:
+    - schedule:
+      cron: "0 0 * * *"
+      filters:
+             branches:
+               only:
+                 - master
 jobs:
   build:
+    branches:
+      only:
+        - master
     docker:
       - image: circleci/node:latest
     steps:
       - checkout
-      - attach_workspace:
-          at: dist/
-      - run:
-          name: Install
-          command: npm install
-      - run:
-          name: Build
-          command: npm run build
-      - run:
-          name: Deploy Release to GitHub
-          command: ./setup-github.sh
+      - deploy:
+          name: Deploy
+          command: |
+            cd docs/
+            git config --global user.email "cs5129606@gmail.com"
+            git config --global user.name "shijiezhou1"
+            git init
+            git add -A
+            git commit -m 'deploy [ci skip]'
+            git push -f git@github.com:shijiezhou1/vue-portfolio.git master:gh-pages
