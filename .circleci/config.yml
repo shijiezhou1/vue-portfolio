@@ -15,7 +15,4 @@ jobs:
           command: npm run build
       - deploy:
           name: Deploy Release to GitHub
-          command: |
-            if [ $CIRCLE_BRANCH == 'develop' ]; then
-              bash .circleci/setup-github.sh
-            fi
+          command: ./setup-github.sh
