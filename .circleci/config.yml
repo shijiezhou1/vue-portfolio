@@ -16,12 +16,11 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run:
-        name: Build Come First
-        command: npm run build
       - deploy:
           name: Deploy
           command: |
+            npm install
+            npm run build
             cd dist/
             git config --global user.email "cs5129606@gmail.com"
             git config --global user.name "shijiezhou1"
