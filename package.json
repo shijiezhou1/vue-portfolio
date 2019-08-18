@@ -28,7 +28,7 @@
   "devDependencies": {
     "@kazupon/vue-i18n-loader": "^0.4.1",
     "@vue/cli-plugin-babel": "^3.6.0",
-    "@vue/cli-plugin-eslint": "^3.6.0",
+    "@vue/cli-plugin-eslint": "^3.10.0",
     "@vue/cli-service": "^3.9.2",
     "babel-eslint": "^10.0.1",
     "bootstrap-vue": "^2.0.0-rc.18",
