@@ -1,7 +1,7 @@
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
   ? '/vue-portfolio/'
-  : '/vue-portfolio/',
+  : '/',
   lintOnSave: process.env.NODE_ENV !== 'production',
   pages: {
     index: {
@@ -19,7 +19,7 @@ module.exports = {
       chunks: ['chunk-vendors', 'chunk-common', 'index']
     },
     // when using the entry-only string format,
-    // template is inferred to be 
+    // template is inferred to be
     // and falls back to  if not found.
     // Output filename `is inferred to be .
     // subpage: 'src/subpage/main.js'

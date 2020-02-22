@@ -10,7 +10,7 @@
     "gh": "node ./node_modules/vue-gh-pages/index.js --branch gh-pages"
   },
   "dependencies": {
-    "@fortawesome/free-brands-svg-icons": "^5.10.2",
+    "@fortawesome/free-brands-svg-icons": "^5.12.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-brands-svg-icons": "^5.12.0",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
