@@ -1,0 +1,42 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "12:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: mongodb
+    versions:
+    - 3.6.3
+    - 3.6.4
+    - 3.6.5
+  - dependency-name: npm
+    versions:
+    - 6.14.11
+    - 7.5.2
+    - 7.5.3
+    - 7.5.4
+    - 7.5.6
+    - 7.6.0
+    - 7.6.1
+    - 7.6.2
+  - dependency-name: "@vue/cli-service"
+    versions:
+    - 4.5.11
+  - dependency-name: "@vue/cli-plugin-eslint"
+    versions:
+    - 4.5.11
+  - dependency-name: "@vue/cli-plugin-babel"
+    versions:
+    - 4.5.11
+  - dependency-name: highlight.js
+    versions:
+    - 9.18.5
+  - dependency-name: http-proxy
+    versions:
+    - 1.18.1
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
